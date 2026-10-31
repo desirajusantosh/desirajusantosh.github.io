@@ -1,5 +1,5 @@
 ---
-title: "Git push using token"
+title: "Fix \"Support for password authentication was removed\" on git push (GitHub token)"
 weight: 2
 resources:
 params:

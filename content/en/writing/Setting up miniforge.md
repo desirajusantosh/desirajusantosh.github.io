@@ -1,5 +1,5 @@
 ---
-title: "Setting up a python environment using miniforge"
+title: "Set up a Python environment with Miniforge (Conda), step by step"
 weight: 2
 resources:
 params:

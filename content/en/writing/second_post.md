@@ -1,5 +1,5 @@
 ---
-title: "Run up to running"
+title: "Building a running habit: consistency first (with Strava)"
 slug: "run-up-to-running"
 aliases: ["/blog/second_post/"]
 weight: 2

@@ -1,5 +1,5 @@
 ---
-title: "Japan 2024"
+title: "Japan travel tips: Suica, food, tipping and getting around (2024)"
 weight: 2
 resources:
 params:

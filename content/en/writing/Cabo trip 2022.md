@@ -1,5 +1,5 @@
 ---
-title: "Mexico 2022"
+title: "Cabo San Lucas travel tips: car rentals, resorts and vegan food"
 weight: 2
 resources:
 params:

@@ -1,5 +1,5 @@
 ---
-title: "Solving few issues to get up and running with Oracle VM "
+title: "Oracle VirtualBox fixes: full-screen resolution and \"virtualization not enabled\""
 weight: 2
 resources:
 params:

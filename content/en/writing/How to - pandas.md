@@ -1,5 +1,5 @@
 ---
-title: "How to - Pandas"
+title: "Pandas snippets I keep reusing: display options and more"
 weight: 2
 resources:
 params:

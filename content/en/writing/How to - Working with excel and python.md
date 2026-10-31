@@ -1,5 +1,5 @@
 ---
-title: "How to - Working with excel and python"
+title: "Automating Excel with Python (openpyxl): notes and references"
 weight: 2
 resources:
 params:
