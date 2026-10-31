@@ -1,5 +1,7 @@
 ---
 title: "Run up to running"
+slug: "run-up-to-running"
+aliases: ["/blog/second_post/"]
 weight: 2
 resources:
 params:

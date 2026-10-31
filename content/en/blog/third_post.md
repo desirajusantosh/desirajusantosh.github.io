@@ -1,5 +1,7 @@
 ---
 title: "Robinhood, your website is broken and it needs your attention now"
+slug: "robinhood-website-broken"
+aliases: ["/blog/third_post/"]
 weight: 2
 resources:
 params:

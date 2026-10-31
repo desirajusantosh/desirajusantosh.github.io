@@ -1,5 +1,7 @@
 ---
 title: "My favorite product coming out of the pandemic"
+slug: "masterclass-pandemic-favorite"
+aliases: ["/blog/fourth_post/"]
 weight: 2
 resources:
 params:

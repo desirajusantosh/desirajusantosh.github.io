@@ -23,7 +23,7 @@
   </div>
 
   <div class="frame-content wrap">
-    <p class="frame-hello">{{ $title }}.</p>
+    <h1 class="frame-hello">{{ $title }}.</h1>
     {{ with $homeBundle }}<p class="frame-mantra">{{ .Content | plainify | replaceRE `\s+` " " }}</p>{{ end }}
     <nav class="frame-menu" aria-label="Sections">
       {{ with $gallery }}<a href="#moments">Moments <sup>{{ len (.Resources.ByType "image") }}</sup></a>{{ end }}

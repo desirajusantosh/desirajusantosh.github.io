@@ -9,6 +9,10 @@ relativeURLs = false
 timeout = "10m"                   # first build resizes large photos; can take a few minutes
 
 [params]
+    homeTitle                    = "Santosh Desiraju — Product, tech, travel & photography"
+    # Paste the codes from Google Search Console / Bing Webmaster Tools here (content="..." value only)
+    googleSiteVerification       = ""
+    bingSiteVerification         = ""
     shortName                    = "Santosh Desiraju"     # Shown in the top-left of every page
     favicon                      = "/img/fav.ico"          # Path to favicon file
     dateFormat                   = "Jan 2, 2006"
@@ -34,6 +38,12 @@ timeout = "10m"                   # first build resizes large photos; can take a
         lon  = -122.05
         unit = "fahrenheit"
 
+    # Who the site is about (used in search-engine structured data)
+    [params.person]
+        location    = "San Francisco Bay Area"
+        description = "Product person working at the intersection of hardware and software, based in the Bay Area."
+        knowsAbout  = ["Product management", "Hardware", "Software", "Photography", "Travel"]
+
     # Social links appear in the intro and footer. Available icons live in layouts/partials/icon.html
     # (twitter, instagram, linkedin-in, github, paper-plane, mail).
     [[params.social]]
@@ -50,6 +60,11 @@ timeout = "10m"                   # first build resizes large photos; can take a
         url   = "https://linkedin.com/in/desirajusantosh"
         icon  = "linkedin-in"
         label = "LinkedIn"
+        icon_pack = "fab"
+    [[params.social]]
+        url   = "https://github.com/desirajusantosh"
+        icon  = "github"
+        label = "GitHub"
         icon_pack = "fab"
     [[params.social]]
         url = "mailto:desirajusantosh@gmail.com"  # For a direct email link, use "mailto:test@example.org".
@@ -85,6 +100,6 @@ timeout = "10m"                   # first build resizes large photos; can take a
         weight           = 0
         title            = "Santosh Desiraju"
         [languages.en.params]
-            description  = "Santosh Desiraju's web site"   # Max 160 characters show in search results
+            description  = "Santosh Desiraju — Bay Area product person working where hardware meets software. Notes on tech projects, travel photography, wallpapers and recommendations."   # Max 160 characters show in search results
             # footerText   = ""                      # Text to override default footer text (markdown allowed)
 
