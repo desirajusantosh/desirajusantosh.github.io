@@ -49,3 +49,16 @@ jobs:
           publish_dir: ./public
           allow_empty_commit: false
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
+      # Tell Bing (and DuckDuckGo, Yahoo, ChatGPT search, which use its index) which pages exist.
+      # Google doesn't support IndexNow; it uses the sitemap submitted in Search Console.
+      - name: Ping IndexNow
+        if: github.ref == 'refs/heads/master'
+        continue-on-error: true
+        env:
+          INDEXNOW_KEY: 9d226f5430700dbfc29c6cec0fdb2900   # also published at static/9d226f5430700dbfc29c6cec0fdb2900.txt
+        run: |
+          sleep 60   # give GitHub Pages a minute to publish the new build
+          URLS=$(grep -o '<loc>[^<]*' public/sitemap.xml | sed 's/<loc>//' | grep -v '/tags/' | jq -R . | jq -sc .)
+          BODY=$(jq -nc --arg key "$INDEXNOW_KEY" --argjson urls "$URLS" '{host: "desirajusantosh.github.io", key: $key, keyLocation: ("https://desirajusantosh.github.io/" + $key + ".txt"), urlList: $urls}')
+          curl -s -o /dev/null -w "IndexNow: HTTP %{http_code}" -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json; charset=utf-8" -d "$BODY"

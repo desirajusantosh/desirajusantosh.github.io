@@ -21,7 +21,8 @@
 
 {{- if $p.IsHome -}}
 {{- $website := dict "@type" "WebSite" "@id" (printf "%s#website" $home) "url" $home "name" $site.Title "description" .desc "publisher" (dict "@id" $personID) "inLanguage" "en-US" -}}
-{{- $graph := dict "@context" "https://schema.org" "@graph" (slice $website $person) }}
+{{- $profile := dict "@type" "ProfilePage" "@id" (printf "%s#profile" $home) "url" $home "name" $site.Title "mainEntity" (dict "@id" $personID) "isPartOf" (dict "@id" (printf "%s#website" $home)) -}}
+{{- $graph := dict "@context" "https://schema.org" "@graph" (slice $website $profile $person) }}
 <script type="application/ld+json">{{ $graph | jsonify | safeJS }}</script>
 {{- else if and $p.IsPage (eq $p.Section "writing") -}}
 {{- $post := dict "@context" "https://schema.org" "@type" "BlogPosting"

@@ -5,6 +5,9 @@ googleAnalytics                  = "G-152PCJSKRY"                       # https:
 canonifyURLs 			 = true
 # Add relativeURLs to true
 relativeURLs = false
+enableRobotsTXT = true             # layouts/robots.txt, points crawlers at the sitemap
+enableGitInfo   = true             # "last updated" dates come from git history
+
 timeout = "10m"                   # first build resizes large photos; can take a few minutes
 
 [params]
@@ -102,3 +105,5 @@ timeout = "10m"                   # first build resizes large photos; can take a
             description  = "Santosh Desiraju — Bay Area product person working where hardware meets software. Notes on tech projects, travel photography, wallpapers and recommendations."   # Max 160 characters show in search results
             # footerText   = ""                      # Text to override default footer text (markdown allowed)
 
+[frontmatter]
+  lastmod = ["lastmod", ":git", "date"]
