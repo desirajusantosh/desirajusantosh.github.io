@@ -7,11 +7,16 @@
 
 {{ $title := $homeBundle.Title | default .Site.Title }}
 {{ $frames := slice }}
-{{ with $gallery }}{{ range ($.Site.Params.home.frames | default (slice "*golden-hills*")) }}{{ with $gallery.Resources.GetMatch . }}{{ $frames = $frames | append . }}{{ end }}{{ end }}{{ end }}
+{{/* Each frame pattern is looked up in Photos first, then Wallpapers */}}
+{{ $sources := slice }}{{ with $gallery }}{{ $sources = $sources | append . }}{{ end }}{{ with .Site.GetPage "/projects/wallpapers" }}{{ $sources = $sources | append . }}{{ end }}
+{{ range ($.Site.Params.home.frames | default (slice "*golden-hills*")) }}
+  {{ $pat := . }}{{ $hit := false }}
+  {{ range $sources }}{{ if not $hit }}{{ with .Resources.GetMatch $pat }}{{ $frames = $frames | append . }}{{ $hit = true }}{{ end }}{{ end }}{{ end }}
+{{ end }}
 <section class="frame" aria-label="Introduction">
   <div class="frame-media" aria-hidden="true">
     {{ range $i, $r := $frames }}
-    {{ $img := $r.Resize "2400x webp q78" }}
+    {{ $img := $r.Resize "2000x webp q72" }}
     <img class="frame-img{{ if eq $i 0 }} is-active{{ end }}" src="{{ $img.RelPermalink }}" width="{{ $img.Width }}" height="{{ $img.Height }}" alt="" data-caption="{{ $r.Title }}" {{ if eq $i 0 }}fetchpriority="high"{{ else }}loading="lazy"{{ end }} decoding="async">
     {{ end }}
   </div>
