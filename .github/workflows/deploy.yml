@@ -37,7 +37,7 @@ jobs:
 
       - name: Build site
         run: |
-          hugo -d public --gc --minify --baseURL "https://desirajusantosh.github.io/santosh-blog/"
+          hugo -d public --gc --minify --baseURL "https://desirajusantosh.github.io/"
 
       - name: Ensure .nojekyll
         run: touch public/.nojekyll

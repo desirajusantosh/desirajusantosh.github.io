@@ -1,5 +1,7 @@
 ---
 title: "Pictures"
+url: "/photos/"
+aliases: ["/projects/photography/"]
 description: "Travel and nature photography by Santosh Desiraju from Maui, Oʻahu, Kyoto, Muir Woods, San Francisco and Monterey Bay."
 weight: 1
 resources:

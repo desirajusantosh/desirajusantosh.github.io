@@ -10,7 +10,7 @@ tags: ["blog"]
 ---
 
 ### 20,000 Photos, One Headshot: Curating My Photo Library with Claude Code
-This blog needed two things: a better headshot than me in a cap and sunglasses, and more photos for the [Wallpapers](../../projects/wallpapers/) page. Somewhere in ten years of photos there had to be good candidates. The problem is that "somewhere" was 15 Google Takeout zip files, an old camera SD card and a backup SSD.
+This blog needed two things: a better headshot than me in a cap and sunglasses, and more photos for the [Wallpapers](../../wallpapers/) page. Somewhere in ten years of photos there had to be good candidates. The problem is that "somewhere" was 15 Google Takeout zip files, an old camera SD card and a backup SSD.
 
 So I asked Claude Code to be my photo critic.
 
@@ -49,7 +49,7 @@ The analysis is 100% local. Nothing gets uploaded for processing, and no cloud p
 ### The Results
 From roughly 20,000 unique photos:
 
-- **27 new wallpapers** on the renamed [Wallpapers & Screensavers](../../projects/wallpapers/) page: Sedona, Yosemite, Hanging Lake, Haleakalā, Cabo and an aurora over the Bay Area hills. Two got cut after a second look: a near-duplicate of another shot from the same flight, and an old tree silhouette that never really worked.
+- **27 new wallpapers** on the renamed [Wallpapers & Screensavers](../../wallpapers/) page: Sedona, Yosemite, Hanging Lake, Haleakalā, Cabo and an aurora over the Bay Area hills. Two got cut after a second look: a near-duplicate of another shot from the same flight, and an old tree silhouette that never really worked.
 - **A new headshot.** This took three tries. Claude's favourite was a cherry blossom portrait from Tokyo, sharp and pretty, but I didn't like it once it was live. The one on the homepage now is me at home with Mocha: eye contact, window light and a dog who clearly wants to be in the photo.
 
 The AI was a good critic, but it wasn't the final word, and that's how it should be.

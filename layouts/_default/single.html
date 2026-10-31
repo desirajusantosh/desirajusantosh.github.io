@@ -1,6 +1,6 @@
 {{ define "main" }}
 <article class="wrap narrow post">
-  <a class="back" href="{{ .Parent.RelPermalink }}">{{ partial "icon.html" "arrow-left" }} {{ if eq .Section "blog" }}All writing{{ else }}{{ .Parent.Title }}{{ end }}</a>
+  <a class="back" href="{{ .Parent.RelPermalink }}">{{ partial "icon.html" "arrow-left" }} {{ if eq .Section "writing" }}All writing{{ else }}{{ .Parent.Title }}{{ end }}</a>
   <header class="post-header">
     <h1 class="display-sm">{{ .Title | markdownify }}</h1>
     <p class="post-meta">

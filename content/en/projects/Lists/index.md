@@ -1,5 +1,7 @@
 ---
 title: "Uses"
+url: "/uses/"
+aliases: ["/projects/lists/"]
 description: "My desk setup, apps and everyday gear"
 weight: 1
 ---

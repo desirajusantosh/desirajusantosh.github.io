@@ -1,5 +1,7 @@
 ---
 title: "Wallpapers & Screensavers"
+url: "/wallpapers/"
+aliases: ["/projects/wallpapers/"]
 description: "Free wallpapers and screensavers from Santosh Desiraju's travels, with full-resolution downloads."
 weight: 1
 resources:

@@ -1,5 +1,7 @@
 ---
 title: "Recommendations"
+url: "/recommendations/"
+aliases: ["/projects/recs/"]
 description: "Restaurants, bakeries & documentaries I keep recommending"
 weight: 1
 layout: "recs"

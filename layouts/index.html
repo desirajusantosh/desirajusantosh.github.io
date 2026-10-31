@@ -28,7 +28,7 @@
     <nav class="frame-menu" aria-label="Sections">
       {{ with $gallery }}<a href="#moments">Moments <sup>{{ len (.Resources.ByType "image") }}</sup></a>{{ end }}
       {{ with .Site.GetPage "/projects" }}<a href="#photos">Collections <sup>{{ len .Pages }}</sup></a>{{ end }}
-      {{ with .Site.GetPage "/blog" }}<a href="#writing">Writing <sup>{{ len .Pages }}</sup></a>{{ end }}
+      {{ with .Site.GetPage "/writing" }}<a href="#writing">Writing <sup>{{ len .Pages }}</sup></a>{{ end }}
       <a href="#about">About</a>
       <a href="#contact">Say hello</a>
     </nav>
@@ -76,7 +76,7 @@
 </section>
 {{ end }}
 
-{{ with .Site.GetPage "/blog" }}
+{{ with .Site.GetPage "/writing" }}
 <section class="section wrap" id="writing">
   <div class="section-head">
     <span class="num">03</span>

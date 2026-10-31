@@ -1,7 +1,28 @@
 {{ define "main" }}
+{{/* Old addresses (the /santosh-blog/ prefix, /blog/, /projects/…) forward to their new home.
+     GitHub Pages has no server-side redirects, so this runs before the page paints. */}}
+<script>
+  (function () {
+    var p = location.pathname, n = p.replace(/^\/santosh-blog(?=\/|$)/, "") || "/";
+    // Old prefix first: the shorter address may itself be a redirect page (e.g. /blog/first_post/)
+    if (n !== p) { location.replace(n + location.search + location.hash); return; }
+    var moves = [
+      ["/blog/", "/writing/"],
+      ["/projects/photography/", "/photos/"],
+      ["/projects/wallpapers/", "/wallpapers/"],
+      ["/projects/recs/", "/recommendations/"],
+      ["/projects/lists/", "/uses/"],
+      ["/projects/", "/collections/"]
+    ];
+    for (var i = 0; i < moves.length; i++) {
+      if (n.indexOf(moves[i][0]) === 0) { n = moves[i][1] + n.slice(moves[i][0].length); break; }
+    }
+    if (n !== p) location.replace(n + location.search + location.hash);
+  })();
+</script>
 <section class="wrap narrow page-head">
   <p class="eyebrow">404</p>
   <h1 class="display-sm">This page wandered off.</h1>
-  <p class="lede">It may have moved during the redesign. Try the <a href="{{ "blog/" | relLangURL }}">writing</a> or <a href="{{ "projects/" | relLangURL }}">photos</a>.</p>
+  <p class="lede">It may have moved during the redesign. Try the <a href="{{ "writing/" | relLangURL }}">writing</a> or <a href="{{ "photos/" | relLangURL }}">photos</a>.</p>
 </section>
 {{ end }}

@@ -35,7 +35,7 @@ On top of the devices, the dashboard has a clock, today's and tomorrow's weather
 ### How It's Built
 The hub is two small programs on one computer: a Node.js server that runs the dashboard, and a Python bridge for the devices whose libraries only exist in Python.
 
-![How the home hub fits together](/blog/home-hub-architecture.svg "Two processes run the house: Node for the screens, Python for the devices")
+![How the home hub fits together](/writing/home-hub-architecture.svg "Two processes run the house: Node for the screens, Python for the devices")
 
 Screens only ever talk to the Node server, which polls the bridge every five seconds and pushes changes to every open screen as they happen.
 
